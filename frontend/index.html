@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">   
 <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Swanky+and+Moo+Moo' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
  <script type="text/javascript">
       google.load("visualization", "1", {packages:["corechart"]});
@@ -62,18 +63,43 @@
   <div class="row-fluid">
     <div class="span4" style="border:1px solid black">
       <!--Sidebar content-->
+      <p style= "font-family: 'Swanky and Moo Moo', cursive; font-size = 40px">
+      	Bet of the Week
+      </p>
       
       <div id="piechart" style="width: 450px; height: 250px;"></div>
-      <div id="vote-area" style = "width:450px; height: 250px;" style="background-image: url(img/tanks.jpg)">
+      <div id="vote-area" style = "width:450px; height: 250px; background: url('img/bomb.jpg')">
       	<center><div class="input-group">
   	<span class="input-group-addon">$</span>
   	<input type="text" class="form-control">
   	<span class="input-group-addon">.00</span>
-	</div></center>
+	</div>
+<button type="button" class="btn btn-default btn-lg">
+  <span class="glyphicon glyphicon-star"></span> Yes
+</button>
+<button type="button" class="btn btn-default btn-lg">
+  <span class="glyphicon glyphicon-thumbs-down"></span> No
+</button>
+</center>
       </div>
     </div>
-    <div class="span8">
+    <div class="span8" style = "border: 1px solid black">
       <!--Body content-->
+            <p style= "font-family: 'Swanky and Moo Moo', cursive; font-size = 40px">
+      	Other Popular Bets
+      </p>
+      <div class="row">
+  <div class="span4" style = "border: 1px solid black"><div id="vote-area" style = " height: 250px; background: url('img/bomb.jpg')"></div></div>
+  <div class="span4" style = "border: 1px solid black"><div id="vote-area" style = " height: 250px;"></div></div>
+  <div class="span4" style = "border: 1px solid black"><div id="vote-area" style = "height: 250px;"></div>
+</div>
+</div>
+ <div class="row">
+  <div class="span4" style = "border: 1px solid black">...</div>
+  <div class="span4" style = "border: 1px solid black">...</div>
+  <div class="span4" style = "border: 1px solid black">...</div>
+</div>
+      
       
     </div>
   </div>
