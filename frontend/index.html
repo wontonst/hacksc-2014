@@ -2,9 +2,28 @@
 <html lang="en">   
 <head>   
 <meta charset="utf-8">   
-<title>Twitter Bootstrap Basic Tab Based Navigation Example</title>   
-<meta name="description" content="Twitter Bootstrap Basic Tab Based Navigation Example">  
-<link href="bootstrap/css/bootstrap.css" rel="stylesheet">   
+<title>Twitter Bootstrap Basic Tab Based Navigation Example</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">   
+<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+ <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Option', 'Percent of Votes'],
+          ['Yes',     11],
+          ['No',      2]]);
+
+        var options = {
+          title: 'Will There Be Another Cold War?'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+      }
+    </script>   
 </head>  
 <body>  
 <div class="navbar navbar-fixed-top">
@@ -36,6 +55,29 @@
     </div>
   </div>
 </div> 
+<br>
+<br>
+<br>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span4" style="border:1px solid black">
+      <!--Sidebar content-->
+      
+      <div id="piechart" style="width: 450px; height: 250px;"></div>
+      <div id="vote-area" style = "width:450px; height: 250px;" style="background-image: url(img/tanks.jpg)">
+      	<center><div class="input-group">
+  	<span class="input-group-addon">$</span>
+  	<input type="text" class="form-control">
+  	<span class="input-group-addon">.00</span>
+	</div></center>
+      </div>
+    </div>
+    <div class="span8">
+      <!--Body content-->
+      
+    </div>
+  </div>
+</div>
 <script src="bootstrap/js/jsquery-1.11.0.min.js"></script>
 <script src="bootstrap/js/bootstrap.js"></script>               
 </body>  
