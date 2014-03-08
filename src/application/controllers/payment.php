@@ -3,9 +3,9 @@
 class Payment extends CI_Controller {
 
     static $creds = array(
-        'USER' => 'platfo_1255077030_biz_api1.gmail.com',
-        'PWD' => '1255077037',
-        'SIGNATURE' => 'Abg0gYcQyxQvnf2HDJkKtA-p6pqhA1k-KTYE0Gcy1diujFio4io5Vqjf',
+        'USER' => 'yiweizhe_api1.usc.edu',
+        'PWD' => '1394318623',
+        'SIGNATURE' => 'AiPC9BjkCyDFQXbSkoZcgqH3hpacACuoPmtBdtQ4azaa.BXUPj6Rkgwa',
         'METHOD' => 'SetExpressCheckout',
         'VERSION' => '78',
         'PAYMENTREQUEST_0_CURRENCYCODE' => 'USD',
@@ -27,10 +27,10 @@ class Payment extends CI_Controller {
                 echo 'Cannot ask to pay for non-numeric value ' . $amt;
                 return;
             }
-            $url = 'https://api-3t.paypal.com/nvp';
+            $url = 'https://api-3t.sandbox.paypal.com/nvp';//'https://api-3t.paypal.com/nvp';
             $url = Payment::generateURL($url) . 'PAYMENTREQUEST_0_PAYMENTACTION=SALE&PAYMENTREQUEST_0_AMT=' . $amt;
             echo 'url: ' . $url . '<a href="' . $url . '">click</a>';
-            ;
+            
             return;
         }
         echo 'payment page<br />';
