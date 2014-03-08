@@ -9,8 +9,8 @@ class Payment extends CI_Controller {
         'METHOD' => 'SetExpressCheckout',
         'VERSION' => '78',
         'PAYMENTREQUEST_0_CURRENCYCODE' => 'USD',
-        'cancelUrl' => '/payment/cancel',
-        'returnUrl' => '/payment/complete',
+        'cancelUrl' => 'http://54.83.52.27/index.php/payment/index/cancel',
+        'returnUrl' => 'http://54.83.52.27/index.php/payment/index/complete',
     );
 
     private static function generateURL($base) {
