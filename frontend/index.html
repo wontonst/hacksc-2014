@@ -6,18 +6,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">   
 <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Swanky+and+Moo+Moo' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
  <script type="text/javascript">
+ 		var yes = 9;
+ 		var no = 3;
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Option', 'Percent of Votes'],
-          ['Yes',     11],
-          ['No',      2]]);
+          ['Yes',     yes],
+          ['No',      no]]);
 
         var options = {
-          title: 'Will There Be Another Cold War?'
+          title: 'Will There Be Another Cold War?',
+          pieHole: 0.4,
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -51,7 +56,15 @@
   <li><a href="#">Wordpress Theme development</a></li>
     </ul>
   </li>
-</ul>     
+</ul>  
+ <form class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Email Address">
+    <input type="text" class="form-control" placeholder="Password">
+    <button type="submit" class="btn btn-default">Login</button>
+  </div>
+  
+</form>   
     </div>
   </div>
 </div> 
@@ -62,18 +75,40 @@
   <div class="row-fluid">
     <div class="span4" style="border:1px solid black">
       <!--Sidebar content-->
+      <p style= "font-family: 'Swanky and Moo Moo', cursive; font-size = 40px">
+      	Bet of the Week
+      </p>
       
-      <div id="piechart" style="width: 450px; height: 250px;"></div>
-      <div id="vote-area" style = "width:450px; height: 250px;" style="background-image: url(img/tanks.jpg)">
+      <div id="piechart" class = "span12" style = "height: 250px"></div>
+      <div id="vote-area" class ="span12" style = " height: 250px; background: url('img/bomb.jpg')">
       	<center><div class="input-group">
   	<span class="input-group-addon">$</span>
   	<input type="text" class="form-control">
   	<span class="input-group-addon">.00</span>
-	</div></center>
+	</div>
+<button type="button" class="btn btn-default btn-lg">
+  <i class="glyphicon glyphicon-star"></i> Yes
+</button>
+<button type="button" class="btn btn-default btn-lg">
+  <span class="glyphicon glyphicon-thumbs-down"></span> No
+</button>
+</center>
       </div>
     </div>
-    <div class="span8">
+    <div class="span8" style = "border: 1px solid black">
       <!--Body content-->
+            <p style= "font-family: 'Swanky and Moo Moo', cursive; font-size = 40px">
+      	Other Popular Bets
+      </p>
+      
+  <div class="span3" style = "border: 1px solid black"><div id="vote-area" style = " height: 250px; "></div></div>
+  <div class="span3" style = "border: 1px solid black"><div id="vote-area" style = " height: 250px;"></div></div>
+  <div class="span3" style = "border: 1px solid black"><div id="vote-area" style = "height: 250px;"></div>
+
+</div>
+
+
+      
       
     </div>
   </div>
