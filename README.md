@@ -3,7 +3,7 @@ hacksc-2014
 
 server is at
 
-ec2-54-81-160-59.compute-1.amazonaws.com
+betty.crabdance.com
 
 54.83.52.27
 
