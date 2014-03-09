@@ -2,6 +2,10 @@
 
 class Payment extends CI_Controller {
 
+    function __construct() {
+        parent::__construct();
+        $this->load->helper('url');
+}
     static $creds = array(
         'USER' => 'yiweizhe_api1.usc.edu',
         'PWD' => '1394318623',
@@ -12,7 +16,7 @@ class Payment extends CI_Controller {
     static $url = 'https://api-3t.sandbox.paypal.com/nvp'; //'https://api-3t.paypal.com/nvp';
 
     private static function post($url, $variables) {
-        echo http_build_query($variables) . '<br />';
+//        echo http_build_query($variables) . '<br />';
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($variables));
@@ -23,8 +27,10 @@ class Payment extends CI_Controller {
     }
 
     public function index() {
-        redirect($this->handleSetExpressCheckout($this->input->post('amt'), $this->input->post('id'), $this->input->post('outcome_id')));
+        $url= $this->handleSetExpressCheckout($this->input->post('amt'), $this->input->post('id'), $this->input->post('outcome_id'));
+//echo $url;return;
         //TODO: KATE NEEDS TO HANDLE REVIEW SCREEN WHICH COMES BACK FROM PAYPAL
+redirect($url);
     }
 
     /**
@@ -37,6 +43,7 @@ class Payment extends CI_Controller {
             echo 'Cannot ask to pay for non-numeric value ' . $amt;
             return;
         }
+
         $append = '?id=' . $id . '&outcome_id=' . $outcome_id;
         $return = 'http://54.83.52.27/index.php/payment/review' . $append;
         $cancel = 'http://54.83.52.27/index.php/payment/cancel' . $append;
@@ -79,13 +86,23 @@ class Payment extends CI_Controller {
         //initiate doexpresscheckoutpaymnt
         $variables = array_merge(Payment::$creds, $checkoutdetails);
         $variables['METHOD'] = 'DoExpressCheckoutPayment';
-
+$variables['id']= $this->input->get('id');
+$variables['outcome_id']=$this->input->get('outcome_id');
         //TODO KATE NEEDS TO DISPLAY $variables AND CALL COMPLETE WITH THE VARIABLES PASSED AS GET
         //echo $resp;
+$data=array(
+'raw'=>$variables,
+'review'=>true,
+'checked'=>true,
+'message'=>'',
+'review_get'=>http_build_query($variables),
+);
+$this->load->view('welcome_message',$data);
     }
 
     public function complete() {
         $variables = $this->input->get();
+//var_dump($variables);
         $resp = Payment::post(Payment::$url, $variables);
         //TODO KATE NEEDS COMPLETED PAYMENT SCREEN
         //TODO JACK NEEDS TO ADD TO BIDS TABLE

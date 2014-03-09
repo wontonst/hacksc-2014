@@ -88,7 +88,9 @@ else{
             <div id="vote-area" class ="span6 offset3">
       		<div class="input-group">
   				<br>
-  				<input type="text" class="form-control" placeholder="$0.00">
+  				<input type="text" name="amt" class="form-control" placeholder="$0.00">
+<input type="hidden" name="id" value="0"/>
+<input type="hidden" name="outcome_id" value="0"/>
   				</div></div>
           <div class="row-fluid"><div id="vote-area" class ="span6 offset3">
 				<button type="submit" class="btn btn-default btn-lg">
@@ -105,7 +107,7 @@ else{
 if (r==true)
   {
   x="You pressed OK!";
-  window.location="/index.php/payment/review"
+  window.location="/index.php/payment/complete?<?php echo $review_get;?>"
   }
 else
   {
