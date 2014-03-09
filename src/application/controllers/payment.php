@@ -111,8 +111,7 @@ $data=array(
 'complete'=>true,
 );
 //redirect('/');
-//$this->load->view('welcome_message',$data);
-        //TODO KATE NEEDS COMPLETED PAYMENT SCREEN
+$this->load->view('welcome_message',$data);
         //TODO JACK NEEDS TO ADD TO BIDS TABLE
     }
 
