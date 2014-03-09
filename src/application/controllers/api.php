@@ -17,12 +17,19 @@ class API extends REST_Controller
 
 	public function events_post()
 	{
-		$this->load->model('Event_Model');
+		$name = $this->input->post('name'),
+		$description 'description' => $this->input->post('description');
+		$image_url => $this->input->post('image');
+
 		$array = array(
-			'name' => $this->input->post('name'),
-			'description' => $this->input->post('description') ?: ''
+			'name' => $name,
 		);
+		if ($description) $array['description'] = $description;
+		if ($image_url) $array['image_url'] = $image_url;
+
+		$this->load->model('Event_Model');
 		$this->Event_Model->insert($array);
+
 		$this->response($array, 301);
 	}
 
@@ -35,12 +42,17 @@ class API extends REST_Controller
 
 	public function outcomes_post()
 	{
-		$this->load->model('Outcome_Model');
+		$event_id = $this->input->post('event_id');
+		$name = $this->input->post('name');
+
 		$array = array(
-			'event_id' => $this->input->post('event_id'),
-			'name' => $this->input->post('name')
+			'event_id' => $event_id,
+			'name' => $name
 		);
+
+		$this->load->model('Outcome_Model');
 		$this->Outcome_Model->insert($array);
+
 		$this->response($array, 301);
 	}
 
@@ -53,15 +65,21 @@ class API extends REST_Controller
 
 	public function bets_post()
 	{
+		// Only logged-in users can create bets
 		if ($this->session->userdata('user_id')) {
-			$this->session->userdata(''); $id || 
-			$this->load->model('Bet_Model');
+			$outcome_id = $this->input->post('outcome_id'),
+			$user_id = $id = $this->session->userdata('user_id'),
+			$amount = $this->input->post('amount')
+
 			$array = array(
-				'outcome_id' => $this->input->post('outcome_id'),
-				'user_id' => $id = $this->session->userdata('user_id'),
-				'amount' => $this->input->post('name')
+				'outcome_id' => $outcome_id,
+				'user_id' => $user_id,
+				'amount' => $amount
 			);
+
+			$this->load->model('Bet_Model');
 			$this->Bet_Model->insert($array);
+
 			$this->response($array, 301);
 		} else {
 			$this->response('', 403);
