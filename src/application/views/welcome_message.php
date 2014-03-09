@@ -128,7 +128,7 @@ if(!$checked){
     <input type="text" class="form-control" placeholder="Last Name"></div></div>
     <div class= "row-fluid">
   	 		<div class = "span6 offset2">
-    <input type="text" class="form-control" placeholder="PayPal Email Address"></div></div>
+    <input type="text" class="form-control" placeholder="Email Address"><font size=1><b><?php echo $message;?></b></font></div></div>
     <div class= "row-fluid">
   	 		<div class = "span6 offset2">
     <input type="password" class="form-control" placeholder="Password"></div></div>
