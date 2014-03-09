@@ -162,7 +162,7 @@ else{
       		Other Popular Bets
       		</p></div></div>
 		<div class="row-fluid">
- 			<div class="span3" style = "border: 1px solid gray; height: 250px; background: url('/img/mj.jpg')"><div class = "row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 25px;  opacity:0.9;"><font size=1><b>Will Marijuana Be Legalized in CA in 2014?</b></font></div></div><div class = "row-fluid"><div class ="span12" style="vertical-align:bottom;"><input type="text" class="form-control" placeholder="$0.00"><button type="button" class="btn btn-default btn-lg"><i class="icon-thumbs-up"></i>
+ 			<div class="span3" style = "border: 1px solid gray; height: 250px; background: url('/img/mj.jpg')"><div class = "row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 25px;  opacity:0.9;"><font size=1><b>Will Marijuana Be Legalized in CA in 2014?</b></font></div></div><div class = "row-fluid"><div class ="span12" style="vertical-align:bottom;"><input type="text" class="form-control" placeholder="$0.00"></div></div><div class = "row-fluid"><div class ="span12" style="vertical-align:bottom;"><button type="button" class="btn btn-default btn-lg"><i class="icon-thumbs-up"></i>
 				</button>
 				<button type="button" class="btn btn-default btn-lg">
   				<i class="icon-thumbs-down"></i>
