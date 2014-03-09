@@ -95,7 +95,7 @@ else{
   				<br>
   				<input type="text" name="amt" class="form-control" placeholder="$0.00">
 <input type="hidden" name="id" value="0"/>
-<input type="hidden" name="outcome_id" value="0"/>
+<input type="hidden" name="outcome_id" value="1"/>
   				</div></div>
           <div class="row-fluid"><div id="vote-area" class ="span6 offset3">
 				<button type="submit" class="btn btn-default btn-lg">
