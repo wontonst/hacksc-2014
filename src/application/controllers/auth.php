@@ -83,7 +83,12 @@ class Auth extends CI_Controller {
                 'type' => 'password',
             );
 
-            $this->_render_page('auth/login', $this->data);
+            $data = array(
+                'checked' => $this->ion_auth->logged_in(),
+                'message' => 'Invalid credentials'
+            );
+            $this->load->view('welcome_message', $data);
+           // $this->_render_page('auth/login', $this->data);
         }
     }
 
