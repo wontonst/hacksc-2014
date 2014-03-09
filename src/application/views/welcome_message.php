@@ -91,10 +91,10 @@ else{
   				<input type="text" class="form-control" placeholder="$0.00">
   				</div></div>
           <div class="row-fluid"><div id="vote-area" class ="span6 offset3">
-				<button type="button" class="btn btn-default btn-lg" onclick="myFunction()">
+				<button type="submit" class="btn btn-default btn-lg" onclick="myFunction()">
   				<i class="icon-thumbs-up"></i> Yes
 				</button>
-				<button type="button" class="btn btn-default btn-lg" onclick="myFunction()">
+				<button type="submit" class="btn btn-default btn-lg" onclick="myFunction()">
   				<i class="icon-thumbs-down"></i> No
 				</button>
 
