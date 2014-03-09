@@ -57,7 +57,7 @@ if(!$checked){
 }
 else{
   ?>
-   <form class="navbar-form navbar-left" role="search" style = "display:none">
+   <form class="navbar-form navbar-left" role="search">
   <div class="form-group">
     <a href="/index.php/auth/logout"><button type="submit" class="btn btn-default">Logout</button></a>
   </div>
