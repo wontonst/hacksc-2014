@@ -39,11 +39,13 @@
   <li class="active">
     <a class="brand" href="index.html">BETty</a>
   </li>
-  <li><a href="about.html">About</a></li>
-  <li><a href="#">Contact</a></li>
 </ul>
   </li>
-</ul>  
+</ul> 
+
+<?php
+if($checked){ 
+  ?>
 <form class="navbar-form navbar-left" role="search" method="post" action="auth/login.php">
   <div class="form-group">
     <input type="text" name="identity" class="form-control" placeholder="Email Address">
@@ -51,13 +53,18 @@
     <button type="submit" class="btn btn-default">Login</button>
   </div>
   </form>
-
+<?php
+}
+else{
+  ?>
    <form class="navbar-form navbar-left" role="search" style = "display:none">
   <div class="form-group">
-    <button type="submit" class="btn btn-default">Logout</button>
+    <a href="/index.php/auth/logout"><button type="submit" class="btn btn-default">Logout</button></a>
   </div>
   </form>
-
+<?php
+}
+?>
     </div>
   </div>
 </div> 
@@ -100,7 +107,7 @@
       		</p>
 
      <!--Moving Banner DIV-->  
-  		<div class="row-fluid"><div class="span12" style = " height: 300px; background: url('img/money.jpg')">
+  		<div class="row-fluid"><div class="span12" style = " height: 300px; background: url('/img/money.jpg')">
   		<div class = "row-fluid"><div class="span6 offset3" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 300px;  opacity:0.9;"><div class= "row-fluid">
   	 		<div class = "span6 offset2"><br>
   			<font size=3><b>Sign Up</b></font></div></div><br>
@@ -134,22 +141,22 @@
       		Other Popular Bets
       		</p></div></div>
 		<div class="row-fluid">
- 			<div class="span3" style = "border: 1px solid gray; height: 250px; background: url('img/mj.jpg')"><div class = "row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 25px;  opacity:0.9;"><font size=1><b>Will Marijuana Be Legalized in CA in 2014?</b></font></div></div><div class = "row-fluid"><div class ="span12" style="vertical-align:bottom;"><input type="text" class="form-control" placeholder="$0.00"><button type="button" class="btn btn-default btn-lg"><i class="icon-thumbs-up"></i>
+ 			<div class="span3" style = "border: 1px solid gray; height: 250px; background: url('/img/mj.jpg')"><div class = "row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 25px;  opacity:0.9;"><font size=1><b>Will Marijuana Be Legalized in CA in 2014?</b></font></div></div><div class = "row-fluid"><div class ="span12" style="vertical-align:bottom;"><input type="text" class="form-control" placeholder="$0.00"><button type="button" class="btn btn-default btn-lg"><i class="icon-thumbs-up"></i>
 				</button>
 				<button type="button" class="btn btn-default btn-lg">
   				<i class="icon-thumbs-down"></i>
 				</button></div></div></div>
-  			<div class="span3" style = "border: 1px solid gray; height: 250px; background: url('img/barack.jpeg')"><div class = "row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 25px;  opacity:0.9;"><font size=1><b>Will Barack Obama Ease Immigration Laws?</b></font></div></div><div class = "row-fluid"><div class ="span12" style="vertical-align:bottom;"><input type="text" class="form-control" placeholder="$0.00"><button type="button" class="btn btn-default btn-lg"><i class="icon-thumbs-up"></i>
+  			<div class="span3" style = "border: 1px solid gray; height: 250px; background: url('/img/barack.jpeg')"><div class = "row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 25px;  opacity:0.9;"><font size=1><b>Will Barack Obama Ease Immigration Laws?</b></font></div></div><div class = "row-fluid"><div class ="span12" style="vertical-align:bottom;"><input type="text" class="form-control" placeholder="$0.00"><button type="button" class="btn btn-default btn-lg"><i class="icon-thumbs-up"></i>
 				</button>
 				<button type="button" class="btn btn-default btn-lg">
   				<i class="icon-thumbs-down"></i>
 				</button></div></div></div>
-  			<div class="span3" style = "border: 1px solid gray; height: 250px; background: url('img/lohan.jpeg')"><div class = "row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 25px;  opacity:0.9;"><font size=1><b>Will Lindsey Lohan's New Series Be a Hit?</b></font></div></div><div class = "row-fluid"><div class ="span12" style="vertical-align:bottom;"><input type="text" class="form-control" placeholder="$0.00"><button type="button" class="btn btn-default btn-lg"><i class="icon-thumbs-up"></i>
+  			<div class="span3" style = "border: 1px solid gray; height: 250px; background: url('/img/lohan.jpeg')"><div class = "row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 25px;  opacity:0.9;"><font size=1><b>Will Lindsey Lohan's New Series Be a Hit?</b></font></div></div><div class = "row-fluid"><div class ="span12" style="vertical-align:bottom;"><input type="text" class="form-control" placeholder="$0.00"><button type="button" class="btn btn-default btn-lg"><i class="icon-thumbs-up"></i>
 				</button>
 				<button type="button" class="btn btn-default btn-lg">
   				<i class="icon-thumbs-down"></i>
 				</button></div></div></div>
-  			<div class="span3" style = "border: 1px solid gray; height: 250px; background: url('img/usc.jpg')"><div class = "row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 25px;  opacity:0.9;"><font size=1><b>Will We Finish Our HackSC App?</b></font></div></div><div class = "row-fluid"><div class ="span12" style="vertical-align:bottom;"><input type="text" class="form-control" placeholder="$0.00"> <button type="button" class="btn btn-default btn-lg"><i class="icon-thumbs-up"></i>
+  			<div class="span3" style = "border: 1px solid gray; height: 250px; background: url('/img/usc.jpg')"><div class = "row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 25px;  opacity:0.9;"><font size=1><b>Will We Finish Our HackSC App?</b></font></div></div><div class = "row-fluid"><div class ="span12" style="vertical-align:bottom;"><input type="text" class="form-control" placeholder="$0.00"> <button type="button" class="btn btn-default btn-lg"><i class="icon-thumbs-up"></i>
 				</button>
 				<button type="button" class="btn btn-default btn-lg">
   				<i class="icon-thumbs-down"></i>
