@@ -2,7 +2,7 @@
 <html lang="en">   
 <head>   
 <meta charset="utf-8">   
-<title>Twitter Bootstrap Basic Tab Based Navigation Example</title>
+<title>BETTY</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">   
 <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -75,27 +75,29 @@
 <div class="container-fluid">
 <div class="row-fluid">
     
-    <div class="span4" style="border:1px solid black">
+    <div class="span4" style="border:1px solid gray;">
       <!--Sidebar content-->
       <p style= "font-family: 'Swanky and Moo Moo', cursive; font-size = 40px">
       	Bet of the Week
       </p>
-      
-      	<div class="row-fluid"><div id="piechart" class = "span12" style = "border: 1px solid black; height: 250px"></div></div>
-      	<div class="row-fluid"><div id="vote-area" class ="span12" style = " border: 1px solid black; height: 250px; background: url('img/bomb.jpg')">
+      <div class="row-fluid"> <div class="span12" style = " background: url('img/putin.jpg')">
+         <div class="row-fluid"><div class = "span12" style = " height: 130px"></div></div>
+      	<div class="row-fluid"><div id="piechart" class = "span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); height: 200px;  opacity:0.9;"></div></div>
+      	<div class="row-fluid"><div id="vote-area" class ="span6 offset3" style = " height: 150px;">
       		<div class="input-group">
-  				<span class="input-group-addon">$</span>
-  				<input type="text" class="form-control">
-  				<span class="input-group-addon">.00</span>
+  				<br>
+  				<input type="text" class="form-control" placeholder="$0.00">
+  				
 				<button type="button" class="btn btn-default btn-lg">
-  				<i class="glyphicon glyphicon-star"></i> Yes
+  				<i class="icon-thumbs-up"></i> Yes
 				</button>
 				<button type="button" class="btn btn-default btn-lg">
-  				<span class="glyphicon glyphicon-thumbs-down"></span> No
+  				<i class="icon-thumbs-down"></i> No
 				</button>
 			</div>
 		</div>
 		</div>
+	</div></div>
   	</div>
     
 
@@ -140,10 +142,26 @@
       		Other Popular Bets
       		</p></div></div>
 		<div class="row-fluid">
- 			<div class="span3" style = "border: 1px solid gray; height: 250px; background: url('img/mj.jpg')"><div class = "row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 25px;  opacity:0.9;"><font size=1><b>Will Marijuana Be Legalized in CA in 2014?</b></font></div></div></div>
-  			<div class="span3" style = "border: 1px solid gray; height: 250px; background: url('img/barack.jpeg')"><div class = "row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 25px;  opacity:0.9;"><font size=1><b>Will Barack Obama Ease Immigration Laws?</b></font></div></div></div>
-  			<div class="span3" style = "border: 1px solid gray; height: 250px; background: url('img/lohan.jpeg')"><div class = "row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 25px;  opacity:0.9;"><font size=1><b>Will Lindsey Lohan's New Series Be a Hit?</b></font></div></div></div>
-  			<div class="span3" style = "border: 1px solid gray; height: 250px; background: url('img/usc.jpg')"><div class = "row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 25px;  opacity:0.9;"><font size=1><b>Will We Finish Our HackSC App?</b></font></div></div></div>
+ 			<div class="span3" style = "border: 1px solid gray; height: 250px; background: url('img/mj.jpg')"><div class = "row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 25px;  opacity:0.9;"><font size=1><b>Will Marijuana Be Legalized in CA in 2014?</b></font></div></div><div class = "row-fluid"><div class ="span12" style="vertical-align:bottom;"><input type="text" class="form-control" placeholder="$0.00"><button type="button" class="btn btn-default btn-lg"><i class="icon-thumbs-up"></i>
+				</button>
+				<button type="button" class="btn btn-default btn-lg">
+  				<i class="icon-thumbs-down"></i>
+				</button></div></div></div>
+  			<div class="span3" style = "border: 1px solid gray; height: 250px; background: url('img/barack.jpeg')"><div class = "row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 25px;  opacity:0.9;"><font size=1><b>Will Barack Obama Ease Immigration Laws?</b></font></div></div><div class = "row-fluid"><div class ="span12" style="vertical-align:bottom;"><input type="text" class="form-control" placeholder="$0.00"><button type="button" class="btn btn-default btn-lg"><i class="icon-thumbs-up"></i>
+				</button>
+				<button type="button" class="btn btn-default btn-lg">
+  				<i class="icon-thumbs-down"></i>
+				</button></div></div></div>
+  			<div class="span3" style = "border: 1px solid gray; height: 250px; background: url('img/lohan.jpeg')"><div class = "row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 25px;  opacity:0.9;"><font size=1><b>Will Lindsey Lohan's New Series Be a Hit?</b></font></div></div><div class = "row-fluid"><div class ="span12" style="vertical-align:bottom;"><input type="text" class="form-control" placeholder="$0.00"><button type="button" class="btn btn-default btn-lg"><i class="icon-thumbs-up"></i>
+				</button>
+				<button type="button" class="btn btn-default btn-lg">
+  				<i class="icon-thumbs-down"></i>
+				</button></div></div></div>
+  			<div class="span3" style = "border: 1px solid gray; height: 250px; background: url('img/usc.jpg')"><div class = "row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 25px;  opacity:0.9;"><font size=1><b>Will We Finish Our HackSC App?</b></font></div></div><div class = "row-fluid"><div class ="span12" style="vertical-align:bottom;"><input type="text" class="form-control" placeholder="$0.00"> <button type="button" class="btn btn-default btn-lg"><i class="icon-thumbs-up"></i>
+				</button>
+				<button type="button" class="btn btn-default btn-lg">
+  				<i class="icon-thumbs-down"></i>
+				</button></div></div></div>
   		</div>
 	</div>
 
