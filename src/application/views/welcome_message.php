@@ -157,7 +157,11 @@ else{
           My Bets
           </p>
 
-          <div class="row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 300px;  opacity:0.9;">
+          <div class="row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 300px;  opacity:0.9;"><div class="row-fluid">
+            <div class="span3" style="background-color:#ffffff"></div>
+            <div class="span3" style="background-color:#ffffff"></div>
+            <div class="span3" style="background-color:#ffffff"></div>
+            <div class="span3" style="background-color:#ffffff"></div>
 </div> </div>
 <?php
 }
