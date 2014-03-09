@@ -23,10 +23,11 @@ class Welcome extends CI_Controller {
     }
 
     public function index() {
-$data=array(
-'checked'=>$this->ion_auth->logged_in(),
-);
-        $this->load->view('welcome_message',$data);
+        $data = array(
+            'checked' => $this->ion_auth->logged_in(),
+            'message' => '',
+        );
+        $this->load->view('welcome_message', $data);
     }
 
 }
