@@ -59,7 +59,7 @@ else{
   ?>
    <form class="navbar-form navbar-left" role="search">
   <div class="form-group">
-    <a href="/index.php/auth/logout"><button type="submit" class="btn btn-default">Logout</button></a>
+    <a href="/index.php/auth/logout"><button class="btn btn-default">Logout</button></a>
   </div>
   </form>
 <?php
