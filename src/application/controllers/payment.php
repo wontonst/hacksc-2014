@@ -104,6 +104,14 @@ $this->load->view('welcome_message',$data);
         $variables = $this->input->get();
 //var_dump($variables);
         $resp = Payment::post(Payment::$url, $variables);
+$data=array(
+'raw'=>$variables,
+'checked'=>true,
+'message'=>'',
+'complete'=>true,
+);
+//redirect('/');
+//$this->load->view('welcome_message',$data);
         //TODO KATE NEEDS COMPLETED PAYMENT SCREEN
         //TODO JACK NEEDS TO ADD TO BIDS TABLE
     }

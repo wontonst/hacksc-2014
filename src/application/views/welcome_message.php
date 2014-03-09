@@ -101,6 +101,9 @@ else{
 				</button>
 
         <script type = "text/javascript">
+function crapFunction(){
+alert('Complete');
+}
           function myFunction()
           {
         var r=confirm("Confirm the payment");
@@ -114,7 +117,7 @@ else
   x="You pressed Cancel!";
   }
 }
-<?php if($review)echo 'myFunction()';?>
+<?php if($review)echo 'myFunction()'; if($complete)echo 'crapFunction()');?>
   </script>
                   
         <br>
