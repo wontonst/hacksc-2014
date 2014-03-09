@@ -128,6 +128,8 @@ if(!$checked){
     <div class= "row-fluid">
   	 		<div class = "span6 offset2">
     <input type="password" class="form-control" placeholder="Password"></div></div>
+        <div class= "row-fluid">
+        <div class = "span6 offset2">
     <input type="password" class="form-control" placeholder="Confirm Password"></div></div>
 
       <div class= "row-fluid">
