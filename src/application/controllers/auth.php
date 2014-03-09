@@ -344,7 +344,11 @@ class Auth extends CI_Controller {
         $data = array(
             'message' => $this->ion_auth->messages(),
         );
-        redirect("/", 'refresh');
+        
+            $this->session->set_flashdata('message', $this->ion_auth->messages());
+            redirect("auth", 'refresh');
+            
+        //redirect("/", 'refresh');
     }
 
     //create a new user
