@@ -122,7 +122,7 @@ if(!$checked){
         <form role="search" method="post" action="/index.php/auth/register">
   	 <div class="form-group">
       <div class="row-fluid">
-        <div class="span12">
+        <div class="span6 offset3">
         <font size=2 color="red"><b><?php echo $message;?></b></font></div></div>
   	 	<div class= "row-fluid">
   	 		<div class = "span6 offset2">
@@ -161,10 +161,10 @@ else{
           </p>
 
           <div class="row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 300px;  opacity:0.9;"><div class="row-fluid">
-            <div class="span3" style="height: 250px;background-color:#ffffff"></div>
-            <div class="span3" style="height: 250px;background-color:#ffffff"></div>
-            <div class="span3" style="height: 250px;background-color:#ffffff"></div>
-            <div class="span3" style="height: 250px;background-color:#ffffff"></div>
+            <div class="span3" style="height: 275px;background-color:#ffffff"></div>
+            <div class="span3" style="height: 275px;background-color:#ffffff"></div>
+            <div class="span3" style="height: 275px;background-color:#ffffff"></div>
+            <div class="span3" style="height: 275px;background-color:#ffffff"></div>
 </div> </div>
 <?php
 }
