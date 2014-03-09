@@ -9,6 +9,11 @@
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Swanky+and+Moo+Moo' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+<link href="/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">   
+<link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Swanky+and+Moo+Moo' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
  <script type="text/javascript">
  		var yes = 9;
@@ -101,20 +106,24 @@ else{
 				</button>
 
         <script type = "text/javascript">
+function crapFunction(){
+alert('Complete');
+}
           function myFunction()
           {
         var r=confirm("Confirm the payment");
 if (r==true)
   {
   x="You pressed OK!";
-  window.location="/index.php/payment/complete?<?php echo $review_get;?>"
+  window.location="/index.php/payment/complete?<?php if(isset($review_get))echo $review_get;?>"
   }
 else
   {
   x="You pressed Cancel!";
   }
 }
-<?php if($review)echo 'myFunction()';?>
+<?php if(isset($review) && $review)echo 'myFunction()';
+ if(isset($complete) && $complete)echo 'crapFunction()';?>
   </script>
                   
         <br>

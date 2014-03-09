@@ -4,8 +4,7 @@ class Events extends CI_Controller
 {
 	public function index()
 	{
-		$this->load->model('Event_Model');
-		$data['events'] = $this->Event_Model->with('outcomes')->get_all();
+		$data['checked'] = $this->ion_auth->logged_in();
         $this->load->view('events', $data);
 	}
 }
