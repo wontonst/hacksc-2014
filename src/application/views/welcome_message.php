@@ -105,7 +105,7 @@ else{
 if (r==true)
   {
   x="You pressed OK!";
-  window.location="/index.php/payment/confirm"
+  window.location="/index.php/payment/complete"
   }
 else
   {
