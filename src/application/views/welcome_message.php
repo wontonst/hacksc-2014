@@ -102,6 +102,9 @@ else{
 
  	<div class="span8" style = "border: 1px solid gray">
       <!--Body content-->
+        <?php
+if(!$checked){ 
+  ?>
         <p style= "font-family: 'Swanky and Moo Moo', cursive; font-size = 40px">
       		Register Now
       		</p>
@@ -137,6 +140,20 @@ else{
   		</div></div>
   		</div>
   	      </div>
+    <?php
+}
+else{
+  ?>
+          <p style= "font-family: 'Swanky and Moo Moo', cursive; font-size = 40px">
+          My Bets
+          </p>
+
+          <div class="row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 300px;  opacity:0.9;">
+</div> </div>
+<?php
+}
+?>
+
 		<div class="row-fluid"><div class="span12" style = "height: 10px"><p style= "font-family: 'Swanky and Moo Moo', cursive; font-size = 40px">
       		Other Popular Bets
       		</p></div></div>
