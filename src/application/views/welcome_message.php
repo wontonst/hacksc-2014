@@ -95,6 +95,9 @@ else{
 				<button type="button" class="btn btn-default btn-lg">
   				<i class="icon-thumbs-down"></i> No
 				</button>
+        <br>
+        <br>
+        <br>
 			</div>
 		</div>
 		</div>
