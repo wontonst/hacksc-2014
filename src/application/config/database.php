@@ -48,7 +48,7 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
+$db['default']['hostname'] = 'betty.crabdance.com';
 $db['default']['username'] = 'postgres';
 $db['default']['password'] = 'stepforwardfrogproblem';
 $db['default']['database'] = 'betty';
