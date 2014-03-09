@@ -83,11 +83,12 @@ else{
       <div class="row-fluid"> <div class="span12" style = " background: url('/img/putin.jpg')">
          <div class="row-fluid"><div class = "span12" style = " height: 130px"></div></div>
       	<div class="row-fluid"><div id="piechart" class = "span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); height: 200px;  opacity:0.9;"></div></div>
-      	<div class="row-fluid"><div id="vote-area" class ="span6 offset3" style = " height: 150px;">
+      	<div class="row-fluid"><div id="vote-area" class ="span6 offset3">
       		<div class="input-group">
   				<br>
   				<input type="text" class="form-control" placeholder="$0.00">
-  				
+  				</div></div>
+          <div class="row-fluid"><div id="vote-area" class ="span6 offset3">
 				<button type="button" class="btn btn-default btn-lg">
   				<i class="icon-thumbs-up"></i> Yes
 				</button>
