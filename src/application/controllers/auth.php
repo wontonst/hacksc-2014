@@ -338,18 +338,17 @@ class Auth extends CI_Controller {
             'first_name' => $this->input->post('first_name'),
             'last_name' => $this->input->post('last_name'),
         );
-if($this->ion_auth->register($username, $password, $email, $additional_data)){
-       //check to see if we are creating the user
-        //redirect them back to the admin page
-        $data = array(
-            'message' => $this->ion_auth->messages(),
-        );
-        
+        if ($this->ion_auth->register($username, $password, $email, $additional_data)) {
+            //check to see if we are creating the user
+            //redirect them back to the admin page
+            $data = array(
+                'message' => $this->ion_auth->messages(),
+            );
+
             redirect("/", 'refresh');
- 
-}else{
-echo 'error could not creat euser';
-}
+        } else {
+            echo 'error could not creat euser';
+        }
     }
 
     //create a new user
