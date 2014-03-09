@@ -4,8 +4,8 @@
 <meta charset="utf-8">   
 <title>BETTY</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">   
-<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">   
+<link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Swanky+and+Moo+Moo' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
@@ -66,7 +66,7 @@
       <p style= "font-family: 'Swanky and Moo Moo', cursive; font-size = 40px">
       	Bet of the Week
       </p>
-      <div class="row-fluid"> <div class="span12" style = " background: url('img/putin.jpg')">
+      <div class="row-fluid"> <div class="span12" style = " background: url('/img/putin.jpg')">
          <div class="row-fluid"><div class = "span12" style = " height: 130px"></div></div>
       	<div class="row-fluid"><div id="piechart" class = "span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); height: 200px;  opacity:0.9;"></div></div>
       	<div class="row-fluid"><div id="vote-area" class ="span6 offset3" style = " height: 150px;">
