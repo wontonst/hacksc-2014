@@ -1,88 +1,161 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
+<!DOCTYPE html>   
+<html lang="en">   
+<head>   
+<meta charset="utf-8">   
+<title>BETTY</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">   
+<link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Swanky+and+Moo+Moo' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+ <script type="text/javascript">
+ 		var yes = 9;
+ 		var no = 3;
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Option', 'Percent of Votes'],
+          ['Yes',     yes],
+          ['No',      no]]);
 
-	<style type="text/css">
+        var options = {
+          title: 'Will There Be Another Cold War?',
+          pieHole: 0.4,
+        };
 
-	::selection{ background-color: #E13300; color: white; }
-	::moz-selection{ background-color: #E13300; color: white; }
-	::webkit-selection{ background-color: #E13300; color: white; }
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+      }
+    </script>   
+</head>  
+<body>  
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+	<ul class="nav">
+  <li class="active">
+    <a class="brand" href="index.html">BETty</a>
+  </li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="#">Contact</a></li>
+</ul>
+  </li>
+</ul>  
+<form class="navbar-form navbar-left" role="search" method="post" action="auth/login.php">
+  <div class="form-group">
+    <input type="text" name="identity" class="form-control" placeholder="Email Address">
+    <input type="text" name="password" class="form-control" placeholder="Password">
+    <button type="submit" class="btn btn-default">Login</button>
+  </div>
+  
+</form>   
+    </div>
+  </div>
+</div> 
+<br>
+<br>
+<br>
+<div class="container-fluid">
+<div class="row-fluid">
+    
+    <div class="span4" style="border:1px solid gray;">
+      <!--Sidebar content-->
+      <p style= "font-family: 'Swanky and Moo Moo', cursive; font-size = 40px">
+      	Bet of the Week
+      </p>
+      <div class="row-fluid"> <div class="span12" style = " background: url('/img/putin.jpg')">
+         <div class="row-fluid"><div class = "span12" style = " height: 130px"></div></div>
+      	<div class="row-fluid"><div id="piechart" class = "span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); height: 200px;  opacity:0.9;"></div></div>
+      	<div class="row-fluid"><div id="vote-area" class ="span6 offset3" style = " height: 150px;">
+      		<div class="input-group">
+  				<br>
+  				<input type="text" class="form-control" placeholder="$0.00">
+  				
+				<button type="button" class="btn btn-default btn-lg">
+  				<i class="icon-thumbs-up"></i> Yes
+				</button>
+				<button type="button" class="btn btn-default btn-lg">
+  				<i class="icon-thumbs-down"></i> No
+				</button>
+			</div>
+		</div>
+		</div>
+	</div></div>
+  	</div>
+    
 
-	body {
-		background-color: #fff;
-		margin: 40px;
-		font: 13px/20px normal Helvetica, Arial, sans-serif;
-		color: #4F5155;
-	}
+ 	<div class="span8" style = "border: 1px solid gray">
+      <!--Body content-->
+        <p style= "font-family: 'Swanky and Moo Moo', cursive; font-size = 40px">
+      		Register Now
+      		</p>
 
-	a {
-		color: #003399;
-		background-color: transparent;
-		font-weight: normal;
-	}
+     <!--Moving Banner DIV-->  
+  		<div class="row-fluid"><div class="span12" style = " height: 300px; background: url('img/money.jpg')">
+  		<div class = "row-fluid"><div class="span6 offset3" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 300px;  opacity:0.9;"><div class= "row-fluid">
+  	 		<div class = "span6 offset2"><br>
+  			<font size=3><b>Sign Up</b></font></div></div><br>
+  	 <div class="form-group">
+  	 	<div class= "row-fluid">
+  	 		<div class = "span6 offset2">
+    <input type="text" class="form-control" placeholder="First Name"></div></div>
+    <div class= "row-fluid">
+  	 		<div class = "span6 offset2">
+    <input type="text" class="form-control" placeholder="Last Name"></div></div>
+    <div class= "row-fluid">
+  	 		<div class = "span6 offset2">
+    <input type="text" class="form-control" placeholder="PayPal Email Address"></div></div>
+    <div class= "row-fluid">
+  	 		<div class = "span6 offset2">
+    <input type="text" class="form-control" placeholder="Password"></div></div>
 
-	h1 {
-		color: #444;
-		background-color: transparent;
-		border-bottom: 1px solid #D0D0D0;
-		font-size: 19px;
-		font-weight: normal;
-		margin: 0 0 14px 0;
-		padding: 14px 15px 10px 15px;
-	}
+      <div class= "row-fluid">
+  	 		<div class = "span6 offset2">
+        <input type="checkbox"> <font size=1><b>I verify that I am over 18 years of age</b></font></div></div>
+      
+    <div class= "row-fluid">
+  	 		<div class = "span6 offset3">
+    <button type="submit" class="btn btn-default">Register Now</button></div></div>
 
-	code {
-		font-family: Consolas, Monaco, Courier New, Courier, monospace;
-		font-size: 12px;
-		background-color: #f9f9f9;
-		border: 1px solid #D0D0D0;
-		color: #002166;
-		display: block;
-		margin: 14px 0 14px 0;
-		padding: 12px 10px 12px 10px;
-	}
-
-	#body{
-		margin: 0 15px 0 15px;
-	}
-	
-	p.footer{
-		text-align: right;
-		font-size: 11px;
-		border-top: 1px solid #D0D0D0;
-		line-height: 32px;
-		padding: 0 10px 0 10px;
-		margin: 20px 0 0 0;
-	}
-	
-	#container{
-		margin: 10px;
-		border: 1px solid #D0D0D0;
-		-webkit-box-shadow: 0 0 8px #D0D0D0;
-	}
-	</style>
-</head>
-<body>
-
-<div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
-
-	<div id="body">
-		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
-
-		<p>If you would like to edit this page you'll find it located at:</p>
-		<code>application/views/welcome_message.php</code>
-
-		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/welcome.php</code>
-
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
+  </div>
+  		</div></div>
+  		</div>
+  	      </div>
+		<div class="row-fluid"><div class="span12" style = "height: 10px"><p style= "font-family: 'Swanky and Moo Moo', cursive; font-size = 40px">
+      		Other Popular Bets
+      		</p></div></div>
+		<div class="row-fluid">
+ 			<div class="span3" style = "border: 1px solid gray; height: 250px; background: url('img/mj.jpg')"><div class = "row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 25px;  opacity:0.9;"><font size=1><b>Will Marijuana Be Legalized in CA in 2014?</b></font></div></div><div class = "row-fluid"><div class ="span12" style="vertical-align:bottom;"><input type="text" class="form-control" placeholder="$0.00"><button type="button" class="btn btn-default btn-lg"><i class="icon-thumbs-up"></i>
+				</button>
+				<button type="button" class="btn btn-default btn-lg">
+  				<i class="icon-thumbs-down"></i>
+				</button></div></div></div>
+  			<div class="span3" style = "border: 1px solid gray; height: 250px; background: url('img/barack.jpeg')"><div class = "row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 25px;  opacity:0.9;"><font size=1><b>Will Barack Obama Ease Immigration Laws?</b></font></div></div><div class = "row-fluid"><div class ="span12" style="vertical-align:bottom;"><input type="text" class="form-control" placeholder="$0.00"><button type="button" class="btn btn-default btn-lg"><i class="icon-thumbs-up"></i>
+				</button>
+				<button type="button" class="btn btn-default btn-lg">
+  				<i class="icon-thumbs-down"></i>
+				</button></div></div></div>
+  			<div class="span3" style = "border: 1px solid gray; height: 250px; background: url('img/lohan.jpeg')"><div class = "row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 25px;  opacity:0.9;"><font size=1><b>Will Lindsey Lohan's New Series Be a Hit?</b></font></div></div><div class = "row-fluid"><div class ="span12" style="vertical-align:bottom;"><input type="text" class="form-control" placeholder="$0.00"><button type="button" class="btn btn-default btn-lg"><i class="icon-thumbs-up"></i>
+				</button>
+				<button type="button" class="btn btn-default btn-lg">
+  				<i class="icon-thumbs-down"></i>
+				</button></div></div></div>
+  			<div class="span3" style = "border: 1px solid gray; height: 250px; background: url('img/usc.jpg')"><div class = "row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 25px;  opacity:0.9;"><font size=1><b>Will We Finish Our HackSC App?</b></font></div></div><div class = "row-fluid"><div class ="span12" style="vertical-align:bottom;"><input type="text" class="form-control" placeholder="$0.00"> <button type="button" class="btn btn-default btn-lg"><i class="icon-thumbs-up"></i>
+				</button>
+				<button type="button" class="btn btn-default btn-lg">
+  				<i class="icon-thumbs-down"></i>
+				</button></div></div></div>
+  		</div>
 	</div>
 
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds</p>
+</div>
 </div>
 
-</body>
-</html>
+
+<script src="bootstrap/js/jsquery-1.11.0.min.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>               
+</body>  
+</html>   
