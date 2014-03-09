@@ -17,9 +17,9 @@ class API extends REST_Controller
 
 	public function events_post()
 	{
-		$name = $this->input->post('name'),
-		$description 'description' => $this->input->post('description');
-		$image_url => $this->input->post('image');
+		$name = $this->input->post('name');
+		$description = $this->input->post('description');
+		$image_url = $this->input->post('image_url');
 
 		$array = array(
 			'name' => $name,
@@ -67,9 +67,9 @@ class API extends REST_Controller
 	{
 		// Only logged-in users can create bets
 		if ($this->session->userdata('user_id')) {
-			$outcome_id = $this->input->post('outcome_id'),
-			$user_id = $id = $this->session->userdata('user_id'),
-			$amount = $this->input->post('amount')
+			$outcome_id = $this->input->post('outcome_id');
+			$user_id = $this->session->userdata('user_id');
+			$amount = $this->input->post('amount');
 
 			$array = array(
 				'outcome_id' => $outcome_id,
