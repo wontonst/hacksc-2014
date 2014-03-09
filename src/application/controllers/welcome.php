@@ -30,6 +30,10 @@ class Welcome extends CI_Controller {
 'complete'=>false,
 'review_get'=>'',
         );
+
+		$this->load->model('Bet_Model');
+		$user_id = $this->session->userdata('user_id');
+		$data['bets'] = $this->Bet_Model->get_by('user_id', $user_id);
         $this->load->view('welcome_message', $data);
     }
 
