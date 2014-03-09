@@ -51,15 +51,16 @@ if(!$checked){
     <input type="text" name="identity" class="form-control" placeholder="Email Address">
     <input type="password" name="password" class="form-control" placeholder="Password">
     <button type="submit" class="btn btn-default">Login</button>
+    <input type="checkbox"> <font size=1><b>Remember My Login</b></font></div></div>
   </div>
   </form>
 <?php
 }
 else{
   ?>
-   <form class="navbar-form navbar-left" role="search" style = "display:none">
+   <form class="navbar-form navbar-left" role="search">
   <div class="form-group">
-    <a href="/index.php/auth/logout"><button type="submit" class="btn btn-default">Logout</button></a>
+    <button class="btn btn-default"><a href="/index.php/auth/logout">Logout</a></button>
   </div>
   </form>
 <?php
@@ -82,17 +83,21 @@ else{
       <div class="row-fluid"> <div class="span12" style = " background: url('/img/putin.jpg')">
          <div class="row-fluid"><div class = "span12" style = " height: 130px"></div></div>
       	<div class="row-fluid"><div id="piechart" class = "span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); height: 200px;  opacity:0.9;"></div></div>
-      	<div class="row-fluid"><div id="vote-area" class ="span6 offset3" style = " height: 150px;">
+      	<div class="row-fluid"><div id="vote-area" class ="span6 offset3">
       		<div class="input-group">
   				<br>
   				<input type="text" class="form-control" placeholder="$0.00">
-  				
+  				</div></div>
+          <div class="row-fluid"><div id="vote-area" class ="span6 offset3">
 				<button type="button" class="btn btn-default btn-lg">
   				<i class="icon-thumbs-up"></i> Yes
 				</button>
 				<button type="button" class="btn btn-default btn-lg">
   				<i class="icon-thumbs-down"></i> No
 				</button>
+        <br>
+        <br>
+        <br>
 			</div>
 		</div>
 		</div>
@@ -102,6 +107,9 @@ else{
 
  	<div class="span8" style = "border: 1px solid gray">
       <!--Body content-->
+        <?php
+if(!$checked){ 
+  ?>
         <p style= "font-family: 'Swanky and Moo Moo', cursive; font-size = 40px">
       		Register Now
       		</p>
@@ -120,10 +128,13 @@ else{
     <input type="text" class="form-control" placeholder="Last Name"></div></div>
     <div class= "row-fluid">
   	 		<div class = "span6 offset2">
-    <input type="text" class="form-control" placeholder="PayPal Email Address"></div></div>
+    <input type="text" class="form-control" placeholder="Email Address"><font size=1><b><?php echo $message;?></b></font></div></div>
     <div class= "row-fluid">
   	 		<div class = "span6 offset2">
-    <input type="text" class="form-control" placeholder="Password"></div></div>
+    <input type="password" class="form-control" placeholder="Password"></div></div>
+        <div class= "row-fluid">
+        <div class = "span6 offset2">
+    <input type="password" class="form-control" placeholder="Confirm Password"></div></div>
 
       <div class= "row-fluid">
   	 		<div class = "span6 offset2">
@@ -137,26 +148,40 @@ else{
   		</div></div>
   		</div>
   	      </div>
+    <?php
+}
+else{
+  ?>
+          <p style= "font-family: 'Swanky and Moo Moo', cursive; font-size = 40px">
+          My Bets
+          </p>
+
+          <div class="row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 300px;  opacity:0.9;">
+</div> </div>
+<?php
+}
+?>
+
 		<div class="row-fluid"><div class="span12" style = "height: 10px"><p style= "font-family: 'Swanky and Moo Moo', cursive; font-size = 40px">
       		Other Popular Bets
       		</p></div></div>
 		<div class="row-fluid">
- 			<div class="span3" style = "border: 1px solid gray; height: 250px; background: url('/img/mj.jpg')"><div class = "row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 25px;  opacity:0.9;"><font size=1><b>Will Marijuana Be Legalized in CA in 2014?</b></font></div></div><div class = "row-fluid"><div class ="span12" style="vertical-align:bottom;"><input type="text" class="form-control" placeholder="$0.00"><button type="button" class="btn btn-default btn-lg"><i class="icon-thumbs-up"></i>
+ 			<div class="span3" style = "border: 1px solid gray; height: 250px; background: url('/img/mj.jpg')"><div class = "row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 25px;  opacity:0.9;"><font size=1><b>Will Marijuana Be Legalized in CA in 2014?</b></font></div></div><div class = "row-fluid"><div class ="span12" style="vertical-align:bottom;"><input type="text" class="form-control" placeholder="$0.00"></div></div><div class = "row-fluid"><div class ="span12" style="vertical-align:bottom;"><button type="button" class="btn btn-default btn-lg"><i class="icon-thumbs-up"></i>
 				</button>
 				<button type="button" class="btn btn-default btn-lg">
   				<i class="icon-thumbs-down"></i>
 				</button></div></div></div>
-  			<div class="span3" style = "border: 1px solid gray; height: 250px; background: url('/img/barack.jpeg')"><div class = "row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 25px;  opacity:0.9;"><font size=1><b>Will Barack Obama Ease Immigration Laws?</b></font></div></div><div class = "row-fluid"><div class ="span12" style="vertical-align:bottom;"><input type="text" class="form-control" placeholder="$0.00"><button type="button" class="btn btn-default btn-lg"><i class="icon-thumbs-up"></i>
+  			<div class="span3" style = "border: 1px solid gray; height: 250px; background: url('/img/barack.jpeg')"><div class = "row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 25px;  opacity:0.9;"><font size=1><b>Will Barack Obama Ease Immigration Laws?</b></font></div></div><div class = "row-fluid"><div class ="span12" style="vertical-align:bottom;"><input type="text" class="form-control" placeholder="$0.00"></div></div><div class = "row-fluid"><div class ="span12" style="vertical-align:bottom;"><button type="button" class="btn btn-default btn-lg"><i class="icon-thumbs-up"></i>
 				</button>
 				<button type="button" class="btn btn-default btn-lg">
   				<i class="icon-thumbs-down"></i>
 				</button></div></div></div>
-  			<div class="span3" style = "border: 1px solid gray; height: 250px; background: url('/img/lohan.jpeg')"><div class = "row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 25px;  opacity:0.9;"><font size=1><b>Will Lindsey Lohan's New Series Be a Hit?</b></font></div></div><div class = "row-fluid"><div class ="span12" style="vertical-align:bottom;"><input type="text" class="form-control" placeholder="$0.00"><button type="button" class="btn btn-default btn-lg"><i class="icon-thumbs-up"></i>
+  			<div class="span3" style = "border: 1px solid gray; height: 250px; background: url('/img/lohan.jpeg')"><div class = "row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 25px;  opacity:0.9;"><font size=1><b>Will Lindsey Lohan's New Series Be a Hit?</b></font></div></div><div class = "row-fluid"><div class ="span12" style="vertical-align:bottom;"><input type="text" class="form-control" placeholder="$0.00"></div></div><div class = "row-fluid"><div class ="span12" style="vertical-align:bottom;"><button type="button" class="btn btn-default btn-lg"><i class="icon-thumbs-up"></i>
 				</button>
 				<button type="button" class="btn btn-default btn-lg">
   				<i class="icon-thumbs-down"></i>
 				</button></div></div></div>
-  			<div class="span3" style = "border: 1px solid gray; height: 250px; background: url('/img/usc.jpg')"><div class = "row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 25px;  opacity:0.9;"><font size=1><b>Will We Finish Our HackSC App?</b></font></div></div><div class = "row-fluid"><div class ="span12" style="vertical-align:bottom;"><input type="text" class="form-control" placeholder="$0.00"> <button type="button" class="btn btn-default btn-lg"><i class="icon-thumbs-up"></i>
+  			<div class="span3" style = "border: 1px solid gray; height: 250px; background: url('/img/usc.jpg')"><div class = "row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 25px;  opacity:0.9;"><font size=1><b>Will We Finish Our HackSC App?</b></font></div></div><div class = "row-fluid"><div class ="span12" style="vertical-align:bottom;"><input type="text" class="form-control" placeholder="$0.00"></div></div><div class = "row-fluid"><div class ="span12" style="vertical-align:bottom;"> <button type="button" class="btn btn-default btn-lg"><i class="icon-thumbs-up"></i>
 				</button>
 				<button type="button" class="btn btn-default btn-lg">
   				<i class="icon-thumbs-down"></i>
