@@ -119,6 +119,7 @@ if(!$checked){
   		<div class = "row-fluid"><div class="span6 offset3" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 300px;  opacity:0.9;"><div class= "row-fluid">
   	 		<div class = "span6 offset2"><br>
   			<font size=3><b>Sign Up</b></font></div></div><br>
+        <form role="search" method="post" action="/index.php/auth/register">
   	 <div class="form-group">
   	 	<div class= "row-fluid">
   	 		<div class = "span6 offset2">
@@ -143,7 +144,7 @@ if(!$checked){
     <div class= "row-fluid">
   	 		<div class = "span6 offset3">
     <button type="submit" class="btn btn-default">Register Now</button></div></div>
-
+</form>
   </div>
   		</div></div>
   		</div>
