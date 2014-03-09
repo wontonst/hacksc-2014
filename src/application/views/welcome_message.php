@@ -44,10 +44,10 @@
 </ul>
   </li>
 </ul>  
- <form class="navbar-form navbar-left" role="search">
+<form class="navbar-form navbar-left" role="search" method="post" action="auth/login.php">
   <div class="form-group">
-    <input type="text" class="form-control" placeholder="Email Address">
-    <input type="text" class="form-control" placeholder="Password">
+    <input type="text" name="identity" class="form-control" placeholder="Email Address">
+    <input type="text" name="password" class="form-control" placeholder="Password">
     <button type="submit" class="btn btn-default">Login</button>
   </div>
   
