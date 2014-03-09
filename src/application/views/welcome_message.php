@@ -193,10 +193,19 @@ else{
           </p>
 
           <div class="row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 300px;  opacity:0.9;"><div class="row-fluid">
-            <div class="span3" style="height: 275px;background-color:#ffffff"><p><font color="black" size=2><?php if($bets[0])echo $bets[0]['outcome_id'];?></p><p><?php if($bets[0])echo $bets[0]['user_id'];?></p><p><?php if($bets[0])echo $bets[0]['amount'];?></p></div>
-            <div class="span3" style="height: 275px;background-color:#ffffff"><p>Outcome I.D.: <?php if($bets[1])echo $bets[1]['outcome_id'];?></p><p>User I.D.: <?php if($bets[1])echo $bets[1]['user_id'];?></p><p>Amount Bet: <?php if($bets[1])echo $bets[1]['amount'];?></p></font></div>
-            <div class="span3" style="height: 275px;background-color:#ffffff"><p><?php if($bets[2])echo $bets[2]['outcome_id'];?></p><p><?php if($bets[2])echo $bets[2]['user_id'];?></p><p><?php if($bets[2])echo $bets[2]['amount'];?></p></div>
-            <div class="span3" style="height: 275px;background-color:#ffffff"><p><?php if ($bets[3])echo $bets[3]['outcome_id'];?></p><p><?php if($bets[3])echo $bets[3]['user_id'];?></p><p><?php if($bets[3])echo $bets[3]['amount'];?></p></div>
+		  	<?php $i = 0; foreach ($bets as $bet) { ?>
+           		 <div class="span3" style="height: 275px;background-color:#ffffff">
+					<p><font color="black" size=2>
+					<?php echo $bet->outcome_id; ?>
+					</font></p>
+					<p>
+					<?php echo $bet->user_id; ?>
+					</p>
+					<p>
+					<?php echo $bet->amount; ?>
+					</p>
+				</div>
+			<?php if (++$i > 3) break; } ?>
 </div> </div>
 <?php
 }

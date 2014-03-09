@@ -100,6 +100,13 @@
 			tagName: 'div',
 			className: 'row',
 			template: app.eventTemplate,
+			events: {
+				'click': 'changeUrl'
+			},
+			changeUrl: function() {
+				Backbone.history.navigate(this.model.get('event_id'), 
+					{ trigger: true });
+			}
 		});
 		app.EventListView = Backbone.Marionette.CollectionView.extend({
 			initialize: function() {
@@ -110,6 +117,20 @@
 			itemView: app.EventView,
 			tagName: 'div',
 		});
+		app.Router = Backbone.Router.extend({
+			routes: {
+				'events': function() {
+					console.log('at index');
+				},
+				'events/:event_id': function(event_id) {
+					console.log('event_id is ' + event_id);
+				},
+				'outcomes': 'outcomes'
+			}
+		});
+		var router = new app.Router;
+		Backbone.history.start();
+
 		var eventList = (new app.EventListView()).render();
 		$('#new-event').click(function() {
 			$('#event-form').toggle();
