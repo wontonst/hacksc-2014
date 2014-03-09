@@ -30,7 +30,7 @@ class API extends REST_Controller
 		$this->load->model('Event_Model');
 		$this->Event_Model->insert($array);
 
-		$this->response($array, 301);
+		$this->response($array, 201);
 	}
 
 	public function outcomes_get()
@@ -80,7 +80,7 @@ class API extends REST_Controller
 			$this->load->model('Bet_Model');
 			$this->Bet_Model->insert($array);
 
-			$this->response($array, 301);
+			$this->response($array, 201);
 		} else {
 			$this->response('', 403);
 		}
