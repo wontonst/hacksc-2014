@@ -106,20 +106,24 @@ else{
 				</button>
 
         <script type = "text/javascript">
+function crapFunction(){
+alert('Complete');
+}
           function myFunction()
           {
         var r=confirm("Confirm the payment");
 if (r==true)
   {
   x="You pressed OK!";
-  window.location="/index.php/payment/complete?<?php echo $review_get;?>"
+  window.location="/index.php/payment/complete?<?php if(isset($review_get))echo $review_get;?>"
   }
 else
   {
   x="You pressed Cancel!";
   }
 }
-<?php if($review)echo 'myFunction()';?>
+<?php if(isset($review) && $review)echo 'myFunction()';
+ if(isset($complete) && $complete)echo 'crapFunction()';?>
   </script>
                   
         <br>
