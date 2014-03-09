@@ -50,8 +50,14 @@
     <input type="password" name="password" class="form-control" placeholder="Password">
     <button type="submit" class="btn btn-default">Login</button>
   </div>
-  
-</form>   
+  </form>
+
+   <form class="navbar-form navbar-left" role="search" style = "display:none">
+  <div class="form-group">
+    <button type="submit" class="btn btn-default">Logout</button>
+  </div>
+  </form>
+
     </div>
   </div>
 </div> 
