@@ -122,19 +122,19 @@ if(!$checked){
   	 <div class="form-group">
   	 	<div class= "row-fluid">
   	 		<div class = "span6 offset2">
-    <input type="text" class="form-control" placeholder="First Name"></div></div>
+    <input type="text" name="first_name" class="form-control" placeholder="First Name"></div></div>
     <div class= "row-fluid">
   	 		<div class = "span6 offset2">
-    <input type="text" class="form-control" placeholder="Last Name"></div></div>
+    <input type="text" name="last_name" class="form-control" placeholder="Last Name"></div></div>
     <div class= "row-fluid">
   	 		<div class = "span6 offset2">
-    <input type="text" class="form-control" placeholder="Email Address"><font size=1><b><?php echo $message;?></b></font></div></div>
+    <input type="text" name="email" class="form-control" placeholder="Email Address"><font size=1><b><?php echo $message;?></b></font></div></div>
     <div class= "row-fluid">
   	 		<div class = "span6 offset2">
-    <input type="password" class="form-control" placeholder="Password"></div></div>
+    <input type="password" name="password" class="form-control" placeholder="Password"></div></div>
         <div class= "row-fluid">
         <div class = "span6 offset2">
-    <input type="password" class="form-control" placeholder="Confirm Password"></div></div>
+    <input type="password" name="password_confirm" class="form-control" placeholder="Confirm Password"></div></div>
 
       <div class= "row-fluid">
   	 		<div class = "span6 offset2">
