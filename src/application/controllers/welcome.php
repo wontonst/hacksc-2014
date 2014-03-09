@@ -23,9 +23,10 @@ class Welcome extends CI_Controller {
     }
 
     public function index() {
-        $this->session->set_flashdata('message', $this->ion_auth->logged_in());
-
-        $this->load->view('welcome_message');
+$data=array(
+'checked'=>$this->ion_auth->logged_in(),
+);
+        $this->load->view('welcome_message',$data);
     }
 
 }

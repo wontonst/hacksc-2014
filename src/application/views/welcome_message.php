@@ -44,9 +44,9 @@
 </ul> 
 
 <?php
-if($checked){ 
+if(!$checked){ 
   ?>
-<form class="navbar-form navbar-left" role="search" method="post" action="index.php/auth/login.php">
+<form class="navbar-form navbar-left" role="search" method="post" action="/index.php/auth/login">
   <div class="form-group">
     <input type="text" name="identity" class="form-control" placeholder="Email Address">
     <input type="password" name="password" class="form-control" placeholder="Password">
