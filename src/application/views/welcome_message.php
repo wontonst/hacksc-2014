@@ -193,10 +193,10 @@ else{
           </p>
 
           <div class="row-fluid"><div class="span12" style = "background-color:#ffffff; background: linear-gradient(white, gray); border: 1px solid gray; height: 300px;  opacity:0.9;"><div class="row-fluid">
-            <div class="span3" style="height: 275px;background-color:#ffffff"></div>
-            <div class="span3" style="height: 275px;background-color:#ffffff"></div>
-            <div class="span3" style="height: 275px;background-color:#ffffff"></div>
-            <div class="span3" style="height: 275px;background-color:#ffffff"></div>
+            <div class="span3" style="height: 275px;background-color:#ffffff"><p><?php echo $bets[0]['outcome_id'];?></p><p><?php echo $bets[0]['user_id'];?></p><p><?php echo $bets[0]['amount'];?></p></div>
+            <div class="span3" style="height: 275px;background-color:#ffffff"><p><?php echo $bets[1]['outcome_id'];?></p><p><?php echo $bets[1]['user_id'];?></p><p><?php echo $bets[1]['amount'];?></p></div>
+            <div class="span3" style="height: 275px;background-color:#ffffff"><p><?php echo $bets[2]['outcome_id'];?></p><p><?php echo $bets[2]['user_id'];?></p><p><?php echo $bets[2]['amount'];?></p></div>
+            <div class="span3" style="height: 275px;background-color:#ffffff"><p><?php echo $bets[3]['outcome_id'];?></p><p><?php echo $bets[3]['user_id'];?></p><p><?php echo $bets[3]['amount'];?></p></div>
 </div> </div>
 <?php
 }
