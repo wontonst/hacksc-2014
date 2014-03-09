@@ -26,6 +26,9 @@ class Welcome extends CI_Controller {
         $data = array(
             'checked' => $this->ion_auth->logged_in(),
             'message' => '',
+'review'=>false,
+'complete'=>false,
+'review_get'=>'',
         );
         $this->load->view('welcome_message', $data);
     }
