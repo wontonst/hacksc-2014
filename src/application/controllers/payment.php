@@ -19,41 +19,44 @@ class Payment extends CI_Controller {
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
         curl_setopt($ch, CURLOPT_HEADER, 0);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-
         return curl_exec($ch);
     }
 
-    public function index($amt) {
-        if (isset($amt)) {
-            return $this->handleSetExpressCheckout($amt);
-        }
-        echo 'payment page<br />';
-        echo '<a href="index/5">pay $5</a>';
+    public function index() {
+        redirect($this->handleSetExpressCheckout($this->input->post('amt'), $this->input->post('id'), $this->input->post('outcome_id')));
     }
 
-    public function handleSetExpressCheckout($amt) {//start express checkout
+    /**
+     * this starts the transaction
+     * @param float $amt dollar amount to bid
+     * @return string paypal url
+     */
+    public function handleSetExpressCheckout($amt, $id, $outcome_id) {//start express checkout
         if (!is_numeric($amt)) {
             echo 'Cannot ask to pay for non-numeric value ' . $amt;
             return;
         }
-//ask paypal api to generate a token
+        $append = '?id=' . $id . '&outcome=' . $outcome_id;
+        $return = 'http://54.83.52.27/index.php/payment/review' . $append;
+        $cancel = 'http://54.83.52.27/index.php/payment/cancel' . $append;
+        //ask paypal api to generate a token
         $variables = Payment::$creds;
         $variables['PAYMENTREQUEST_0_PAYMENTACTION'] = 'SALE';
         $variables['PAYMENTREQUEST_0_AMT'] = $amt;
         $variables['PAYMENTREQUEST_0_CURRENCYCODE'] = 'USD';
-        $variables['cancelUrl'] = 'http://54.83.52.27/index.php/payment/cancel';
-        $variables['returnUrl'] = 'http://54.83.52.27/index.php/payment/review';
+        $variables['cancelUrl'] = $cancel;
+        $variables['returnUrl'] = $return;
         $variables['NOSHIPPING'] = 1;
         $variables['PAYMENTREQUEST_0_DESC'] = 'Betty account betting $' . $amt;
-        var_dump($variables);
+        //var_dump($variables);
         $resp = Payment::post(Payment::$url, $variables);
-        echo $resp;
+        //echo $resp;
         $resp = parse_str($resp, $arr);
-        var_dump($arr);
 
-//generate link for users to go to paypal
+        //var_dump($arr);
+        //generate link for users to go to paypal
         $url = 'https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=' . $arr['TOKEN'];
-        echo '<a href="' . $url . '">Click<a>';
+        return $url; //DIRECT USER TO THIS URL
     }
 
     public function cancel() {
@@ -61,21 +64,20 @@ class Payment extends CI_Controller {
     }
 
     public function review() {//handles getexpresscheckoutdetails and initiates doexpresscheckoutpayment
-//receive getexpresscheckoutdetails
+        //receive getexpresscheckoutdetails
         $variables = Payment::$creds;
         $variables['TOKEN'] = $_GET['token'];
         $variables['METHOD'] = 'GetExpressCheckoutDetails';
-        var_dump($variables);
+        //var_dump($variables);
         $resp = Payment::post(Payment::$url, $variables);
-        echo $resp;
+        //echo $resp;
         parse_str($resp, $checkoutdetails);
-        var_dump($checkoutdetails);
-
-//initiate doexpresscheckoutpaymnt
+        //var_dump($checkoutdetails);
+        //initiate doexpresscheckoutpaymnt
         $variables = array_merge(Payment::$creds, $checkoutdetails);
         $variables['METHOD'] = 'DoExpressCheckoutPayment';
         $resp = Payment::post(Payment::$url, $variables);
-        echo $resp;
+        //echo $resp;
     }
 
     public function complete() {
