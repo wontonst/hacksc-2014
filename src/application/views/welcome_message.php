@@ -199,6 +199,8 @@ else{
               <div class="row-fluid"> <div class ="span12">
                 <br>
                 <br>
+                <br>
+                <br>
 		<div class="row-fluid">
                             <form method="post" action="/index.php/payment">
  			<div class="span3" style = "border: 1px solid gray; height: 250px; background: url('/img/mj.jpg')">
