@@ -344,10 +344,17 @@ class Auth extends CI_Controller {
             $data = array(
                 'message' => $this->ion_auth->messages(),
             );
-
-            redirect("/", 'refresh');
+            $data = array(
+                'checked' => $this->ion_auth->logged_in(),
+                'message' => 'Registration successful',
+            );
+            $this->load->view('welcome_message', $data);
         } else {
-            echo 'error could not creat euser';
+            $data = array(
+                'checked' => $this->ion_auth->logged_in(),
+                'message' => 'Email has been taken'
+            );
+            $this->load->view('welcome_message', $data);
         }
     }
 
