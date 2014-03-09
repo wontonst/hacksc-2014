@@ -111,8 +111,16 @@ $data=array(
 'complete'=>true,
 );
 //redirect('/');
-$this->load->view('welcome_message',$data);
-        //TODO JACK NEEDS TO ADD TO BIDS TABLE
+//$this->load->view('welcome_message',$data);
+        //TODO KATE NEEDS COMPLETED PAYMENT SCREEN
+
+		$bet_array = array(
+			'outcome_id' => $variables['outcome_id'],
+			'user_id' => $this->session->userdata('user_id'),
+			'amount' => $variables['PAYMENTREQUEST_0_AMT']
+		);
+		$this->load->model('Bet_Model');
+		$this->Bet_Model->insert($bet_array);
     }
 
 }
