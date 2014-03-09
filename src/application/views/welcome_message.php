@@ -51,6 +51,7 @@ if(!$checked){
     <input type="text" name="identity" class="form-control" placeholder="Email Address">
     <input type="password" name="password" class="form-control" placeholder="Password">
     <button type="submit" class="btn btn-default">Login</button>
+    <input type="checkbox"> <font size=1><b>Remember My Login</b></font></div></div>
   </div>
   </form>
 <?php
@@ -126,7 +127,8 @@ if(!$checked){
     <input type="text" class="form-control" placeholder="PayPal Email Address"></div></div>
     <div class= "row-fluid">
   	 		<div class = "span6 offset2">
-    <input type="text" class="form-control" placeholder="Password"></div></div>
+    <input type="password" class="form-control" placeholder="Password"></div></div>
+    <input type="password" class="form-control" placeholder="Confirm Password"></div></div>
 
       <div class= "row-fluid">
   	 		<div class = "span6 offset2">
