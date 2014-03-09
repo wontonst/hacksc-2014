@@ -122,7 +122,7 @@ if(!$checked){
         <form role="search" method="post" action="/index.php/auth/register">
   	 <div class="form-group">
       <div class="row-fluid">
-        <div class="span12">
+        <div class="span6 offset3">
         <font size=2 color="red"><b><?php echo $message;?></b></font></div></div>
   	 	<div class= "row-fluid">
   	 		<div class = "span6 offset2">
