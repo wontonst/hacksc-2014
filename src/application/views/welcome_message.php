@@ -193,7 +193,7 @@ else{
 		<div class="row-fluid"><div class="span12" style = "height: 10px"><p style= "font-family: 'Swanky and Moo Moo', cursive; font-size = 40px">
       		Other Popular Bets
       		</p></div></div>
-              
+              <div class="row-fluid"> <div class ="span12">
 		<div class="row-fluid">
                             <form method="post" action="/index.php/payment">
  			<div class="span3" style = "border: 1px solid gray; height: 250px; background: url('/img/mj.jpg')">
