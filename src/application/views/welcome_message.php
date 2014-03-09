@@ -91,12 +91,27 @@ else{
   				<input type="text" class="form-control" placeholder="$0.00">
   				</div></div>
           <div class="row-fluid"><div id="vote-area" class ="span6 offset3">
-				<button type="button" class="btn btn-default btn-lg">
+				<button type="button" class="btn btn-default btn-lg" onclick="myFunction()">
   				<i class="icon-thumbs-up"></i> Yes
 				</button>
-				<button type="button" class="btn btn-default btn-lg">
+				<button type="button" class="btn btn-default btn-lg" onclick="myFunction()">
   				<i class="icon-thumbs-down"></i> No
 				</button>
+
+        <script type = "text/javascript">
+          function myFunction()
+          {
+        var r=confirm("Confirm the payment");
+if (r==true)
+  {
+  x="You pressed OK!";
+  }
+else
+  {
+  x="You pressed Cancel!";
+  }
+}
+  </script>
                   
         <br>
         <br>
