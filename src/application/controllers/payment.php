@@ -24,6 +24,7 @@ class Payment extends CI_Controller {
 
     public function index() {
         redirect($this->handleSetExpressCheckout($this->input->post('amt'), $this->input->post('id'), $this->input->post('outcome_id')));
+        //TODO: KATE NEEDS TO HANDLE REVIEW SCREEN WHICH COMES BACK FROM PAYPAL
     }
 
     /**
@@ -36,7 +37,7 @@ class Payment extends CI_Controller {
             echo 'Cannot ask to pay for non-numeric value ' . $amt;
             return;
         }
-        $append = '?id=' . $id . '&outcome=' . $outcome_id;
+        $append = '?id=' . $id . '&outcome_id=' . $outcome_id;
         $return = 'http://54.83.52.27/index.php/payment/review' . $append;
         $cancel = 'http://54.83.52.27/index.php/payment/cancel' . $append;
         //ask paypal api to generate a token
@@ -68,6 +69,8 @@ class Payment extends CI_Controller {
         $variables = Payment::$creds;
         $variables['TOKEN'] = $_GET['token'];
         $variables['METHOD'] = 'GetExpressCheckoutDetails';
+        $variables['id'] = $_GET['id'];
+        $variables['outcome_id'] = $_GET['outcome_id'];
         //var_dump($variables);
         $resp = Payment::post(Payment::$url, $variables);
         //echo $resp;
@@ -76,12 +79,16 @@ class Payment extends CI_Controller {
         //initiate doexpresscheckoutpaymnt
         $variables = array_merge(Payment::$creds, $checkoutdetails);
         $variables['METHOD'] = 'DoExpressCheckoutPayment';
-        $resp = Payment::post(Payment::$url, $variables);
+
+        //TODO KATE NEEDS TO DISPLAY $variables AND CALL COMPLETE WITH THE VARIABLES PASSED AS GET
         //echo $resp;
     }
 
     public function complete() {
-        
+        $variables = $this->input->get();
+        $resp = Payment::post(Payment::$url, $variables);
+        //TODO KATE NEEDS COMPLETED PAYMENT SCREEN
+        //TODO JACK NEEDS TO ADD TO BIDS TABLE
     }
 
 }
