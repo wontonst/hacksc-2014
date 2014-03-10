@@ -119,28 +119,26 @@
 		});
 		app.Router = Backbone.Router.extend({
 			routes: {
-				'events': function() {
-					console.log('at index');
-				},
-				'events/:event_id': function(event_id) {
+				':event_id': function(event_id) {
 					console.log('event_id is ' + event_id);
 				},
-				'outcomes': 'outcomes'
+				':event_id/outcomes': function() {
+					console.log('trying to get outcomes');
+				}
 			}
 		});
 		var router = new app.Router;
 		Backbone.history.start();
 
-		var eventList = (new app.EventListView()).render();
+		var eventListView = (new app.EventListView()).render();
 		$('#new-event').click(function() {
 			$('#event-form').toggle();
 		});
 		$('#event-form').submit(function(event) {
-			var $this = $(this);
 			event.preventDefault();
-			$.post($this.attr('action'), $this.serialize(), function() {
-				eventList.collection.reset(filtered);
-			});
+			var array = $('#event-form').serializeArray();
+			var obj = _.object(_.map(array, _.values));
+			eventListView.collection.create(obj);
 		});
 	</script>
 </body>
