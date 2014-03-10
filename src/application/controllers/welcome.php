@@ -31,9 +31,14 @@ class Welcome extends CI_Controller {
 'review_get'=>'',
         );
 
-		$this->load->model('Bet_Model');
-		$user_id = $this->session->userdata('user_id');
-		$data['bets'] = $this->Bet_Model->get_many_by('user_id', $user_id);
+		if ($this->ion_auth->logged_in()) {
+			$user_id = $this->session->userdata('user_id');
+			$this->load->model('Bet_Model');
+			$data['bets'] = $this->Bet_Model->get_many_by('user_id', $user_id);
+		} else {
+			$this->load->model('Bet_Model');
+			$data['bets'] = $this->Bet_Model->get_all();
+		}
         $this->load->view('welcome_message', $data);
     }
 
