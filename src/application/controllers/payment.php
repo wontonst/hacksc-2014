@@ -45,8 +45,9 @@ redirect($url);
         }
 
         $append = '?id=' . $id . '&outcome_id=' . $outcome_id;
-        $return = 'http://54.83.52.27/index.php/payment/review' . $append;
-        $cancel = 'http://54.83.52.27/index.php/payment/cancel' . $append;
+        $base_url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+        $return = $base_url . '/review' . $append;
+        $cancel = $base_url . '/cancel' . $append;
         //ask paypal api to generate a token
         $variables = Payment::$creds;
         $variables['PAYMENTREQUEST_0_PAYMENTACTION'] = 'SALE';
